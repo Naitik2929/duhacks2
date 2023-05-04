@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const db = async () => {
     try {
-        const con = await mongoose.connect("mongodb+srv://dustin:1234@nodeexpressproject.ihoq4gl.mongodb.net/medigo", {
+        const con = await mongoose.connect(process.env.URL, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         })
